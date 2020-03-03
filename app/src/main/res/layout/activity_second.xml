@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@drawable/mynewcolor"
+    tools:context=".ui.login.secondActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:fontFamily="@font/cantata_one"
+        android:text="Home"
+        android:textAlignment="center"
+        android:textSize="46sp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:layout_marginTop="64dp"
+        android:fontFamily="@font/cantata_one"
+        android:text="Library"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="36dp"
+        android:onClick="second"/>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:fontFamily="@font/cantata_one"
+        android:text="Find Books"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="34dp"
+        android:onClick="third"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:fontFamily="@font/cantata_one"
+        android:text="Share Books"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/button1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.502"
+        tools:layout_editor_absoluteX="51dp"
+        android:onClick="fourth"/>
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:fontFamily="@font/cantata_one"
+        android:text="Community Section"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="171dp"
+        android:onClick="fifth"/>
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:fontFamily="@font/cantata_one"
+        android:text="Discussion forum"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="51dp"
+        tools:layout_editor_absoluteY="171dp"
+        android:onClick="sixth"/>
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="84dp"
+        android:fontFamily="@font/cantata_one"
+        android:onClick="sixth"
+        android:text="Logout"
+        android:layout_marginLeft="142dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="171dp" />
+
+</LinearLayout>

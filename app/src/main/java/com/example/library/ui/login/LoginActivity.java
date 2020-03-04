@@ -2,6 +2,7 @@ package com.example.library.ui.login;
 
 import android.app.Activity;
 
+import androidx.annotation.NonNull;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
@@ -26,6 +27,11 @@ import android.widget.Toast;
 import com.example.library.R;
 import com.example.library.ui.login.LoginViewModel;
 import com.example.library.ui.login.LoginViewModelFactory;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.FirebaseApp;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -35,6 +41,7 @@ public class LoginActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        FirebaseApp.initializeApp(this);
         loginViewModel = ViewModelProviders.of(this, new LoginViewModelFactory())
                 .get(LoginViewModel.class);
 
@@ -42,6 +49,8 @@ public class LoginActivity extends AppCompatActivity {
         final EditText passwordEditText = findViewById(R.id.password);
         final Button loginButton = findViewById(R.id.login);
         final ProgressBar loadingProgressBar = findViewById(R.id.loading);
+        final FirebaseAuth mFirebaseAuth;
+        mFirebaseAuth = FirebaseAuth.getInstance();
 
         loginViewModel.getLoginFormState().observe(this, new Observer<LoginFormState>() {
             @Override
@@ -61,7 +70,7 @@ public class LoginActivity extends AppCompatActivity {
 
         loginViewModel.getLoginResult().observe(this, new Observer<LoginResult>() {
             @Override
-            public void onChanged(@Nullable LoginResult loginResult) {
+            public void onChanged(@Nullable final LoginResult loginResult) {
                 if (loginResult == null) {
                     return;
                 }
@@ -70,8 +79,23 @@ public class LoginActivity extends AppCompatActivity {
                     showLoginFailed(loginResult.getError());
                 }
                 if (loginResult.getSuccess() != null) {
-                    updateUiWithUser(loginResult.getSuccess());
+                    mFirebaseAuth.createUserWithEmailAndPassword(usernameEditText.getText().toString(),passwordEditText.getText().toString()).addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
+
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(!task.isSuccessful()){
+                                Toast.makeText(getApplicationContext(),"Not Successful",Toast.LENGTH_SHORT).show();
+                            }
+                            else {
+                                Toast.makeText(getApplicationContext(),"Successful",Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+                    });
+                    startActivity(new Intent(LoginActivity.this,secondActivity.class));
+
                 }
+
                 setResult(Activity.RESULT_OK);
 
                 //Complete and destroy login activity once successful
@@ -121,7 +145,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void updateUiWithUser(LoggedInUserView model) {
-        String welcome = getString(R.string.welcome) + model.getDisplayName();
+        String welcome = getString(R.string.welcome) ;
         // TODO : initiate successful logged in experience
         Toast.makeText(getApplicationContext(), welcome, Toast.LENGTH_LONG).show();
         Intent intent = new Intent(this,secondActivity.class);

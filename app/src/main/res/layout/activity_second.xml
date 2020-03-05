@@ -57,7 +57,7 @@
         android:layout_width="match_parent"
         android:layout_height="84dp"
         android:fontFamily="@font/cantata_one"
-        android:text="Community Section"
+        android:text="Resource Section"
         android:textSize="20sp"
         tools:layout_editor_absoluteX="51dp"
         tools:layout_editor_absoluteY="171dp"

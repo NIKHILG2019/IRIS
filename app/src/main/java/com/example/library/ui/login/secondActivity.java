@@ -9,6 +9,7 @@ import android.view.View;
 import com.example.library.R;
 import com.example.library.displayData;
 import com.example.library.thirdActivity;
+import com.example.library.uploadActivity;
 
 public class secondActivity extends AppCompatActivity {
 
@@ -35,7 +36,8 @@ public class secondActivity extends AppCompatActivity {
     }
 
     public void fifth(View view) {
-
+        Intent  i2 = new Intent(secondActivity.this, uploadActivity.class);
+        startActivity(i2);
     }
 
     public void sixth(View view) {

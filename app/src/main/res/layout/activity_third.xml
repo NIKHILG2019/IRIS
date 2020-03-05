@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".thirdActivity"
+    android:orientation="vertical"
+    android:background="@drawable/secondcolor">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/cantata_one"
+        android:text="Enter Book Details"
+        android:textSize="36sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/cantata_one"
+
+        android:text="Book name"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/enter_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/cantata_one"
+        android:layout_marginBottom="10dp"
+        android:hint="Enter Title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/cantata_one"
+        android:text="Author name"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/enter_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="@font/cantata_one"
+        android:hint="Enter Author Name" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/cantata_one"
+        android:text="Edition"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/enter_edition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/cantata_one"
+        android:hint="Enter Edition" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/cantata_one"
+        android:text="Re-enter email-id"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:ems="10"
+        android:fontFamily="@font/cantata_one"
+        android:hint="email-id"
+        android:inputType="textEmailAddress" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="140dp"
+        android:layout_marginBottom="10dp"
+        android:fontFamily="@font/cantata_one"
+        android:text="Submit" />
+
+
+</LinearLayout>

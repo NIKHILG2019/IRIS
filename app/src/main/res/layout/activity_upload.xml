@@ -8,31 +8,22 @@
     android:background="@drawable/secondcolor"
     android:orientation="vertical"
     >
-<TextView
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="Access Resources"
-    android:layout_margin="20px"
-    />
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:fontFamily="@font/cantata_one"
+        android:text="Access Resources"
+        android:textSize="36sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:fontFamily="@font/cantata_one"
         android:text="NPTEL"
-        android:layout_margin="20px"
-        />
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginBottom="10dp"
-        android:text="Open Site"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="GeeksForGeeks"
-        android:layout_margin="20px"
-        />
+        android:textSize="20sp" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -44,9 +35,25 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Drive Resources"
         android:layout_margin="20px"
+        android:fontFamily="@font/cantata_one"
+        android:text="GeeksForGeeks"
+        android:textSize="20sp" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="10dp"
+        android:text="Open Site"
         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20px"
+        android:fontFamily="@font/cantata_one"
+        android:text="Drive Resources"
+        android:textSize="20sp" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -58,14 +65,24 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Access Resources"
         android:layout_margin="20px"
-        />
+        android:fontFamily="@font/cantata_one"
+        android:text="Edureka"
+        android:textSize="20sp" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:layout_marginBottom="10dp"
+        android:text="Open Site "
         />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/cantata_one"
+        android:text="To add resources email at gangaramaninikhil@gmail.com"
+        android:layout_marginLeft="10sp"
+        android:textSize="20sp" />
 
 </LinearLayout>
